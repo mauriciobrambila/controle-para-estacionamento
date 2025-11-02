@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Estacionamento</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script1.js" defer></script>
+</head>
+<body>
+  <div class="parallax-bg"></div>
+
+  <header>
+    <h1>Controle de Estacionamento Diário</h1>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Cadastre os carros que estão no estacionamento</h2>
+    </section>
+
+    <section class="card">
+      <div class="lineInput">
+        <label for="carro">Carro</label>
+        <input type="text" id="carro" placeholder="Ex: Fiat Uno" />
+      </div>
+
+      <div class="lineInput">
+        <label for="valor">Valor pago</label>
+        <input type="number" id="valor" placeholder="Ex: 25.00" />
+      </div>
+
+      <div class="lineInput">
+        <label for="turno">Turno</label>
+        <select id="turno">
+          <option value="" disabled selected hidden>Escolha o turno</option>
+          <option value="Manhã">Manhã</option>
+          <option value="Tarde">Tarde</option>
+          <option value="Noite">Noite</option>
+        </select>
+      </div>
+
+      <div class="buttons">
+        <button class="btn-primary" onclick="produto.salvar()">Salvar</button>
+        <button class="btn-secondary" onclick="produto.cancelar()">Cancelar</button>
+      </div>
+    </section>
+
+    <section class="content">
+      <table>
+        <thead>
+          <tr>
+            <th class="center">ID</th>
+            <th>Carro</th>
+            <th>Valor</th>
+            <th>Turno</th>
+            <th class="center">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+
+      <div class="stats">
+        <div class="stat">
+          <h3>Lucro total obtido</h3>
+          <p id="lucro" class="valor">R$ 0,00</p>
+        </div>
+
+        <div class="stat">
+          <h3>Total por turnos</h3>
+          <p id="calturno" class="valor">—</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
